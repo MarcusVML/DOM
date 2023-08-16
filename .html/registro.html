@@ -1,0 +1,653 @@
+
+        <h1>Informações gerais</h1>
+        <span>Elaborado por: Marcus Vinícius - Aprovado por: 
+        Rodrigo Silveira - Publicado: null</small>
+        <h2>Período dos Ensaios:  - undefined</h1>
+        <h1><center>
+        Parte 1 - Identificação e condições gerais
+</center></h1>
+<br>
+
+<!--Informações inseridas pelo usuário sobre o cliente solicitante-->
+<h1 class="title">
+    Cliente:
+</h1>
+    <ul js="Cliente.map(e=>`<li style='text-align:left'>${e}</li>`).join('')" style="column-count:2; list-style: none;">
+    </ul>
+        <!--Informações inseridas pelo usuário sobre o fabricante da amostra-->
+        <h2 class="title">
+            Fabricante:
+        </h2>
+            <ul js="Fabricante.map(e=>`<li style='text-align:left'>${e}</li>`).join('')" style="column-count: 2; list-style: none;">
+            </ul>
+            <!--Informações padrões e fixas sobre o LABELO-->
+        <h2 class="title">
+            Sumário de identificação do laboratório:
+        </h2>
+        <ul style="list-style: none;" >
+            <li>Razão social: União Brasileira de Educação e Assistência.</li>
+            <li>Nome fantasia: Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS.</li>
+            <li>Unidade: LABELO - Laboratórios Especializados em Eletroeletrônica.</li>
+            <li>CNPJ: 88.630.413/0002-81.</li>
+            <li>Endereço: Av. Ipiranga, nº 6681, Prédio 30, Bloco A - Sala 210 - Partenon - Porto Alegre - RS.</li>
+            <li>CEP: 90619-900.</li>
+            <li>Número de acreditação do LABELO/PUCRS: CRL 0075.</li>
+        </ul>
+<hr>
+<!--Informações inseridas pelo usuário sobre as características da amostra ensaiada-->
+<h1 class="title">
+    Objeto ensaiado (amostra):
+</h1>
+    <ul js="ObjetoEnsaiado.map(e=>`<li style='text-align:left'>${e}</li>`).join('')" style="column-count:2; list-style: none;">
+    </ul>
+    <!--Tabela com informações referentes as características e informações da amostra
+    exibindo a tabela com os dados de unidade externa e interna ou apenas unidade externa,
+    conforme selecionad no formulário-->
+    
+
+    <!--Ensaio realizado em equipamento com unidade externa e unidade interna-->
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th>Unidade externa</th>
+                        <th>Unidade interna</th>
+                    </tr>
+                    <tr>
+                        <td>Modelo</td>
+                        <td>TAC-09CHSA2-INV</td>
+                        <td>TAC-09CHSA2-INV</td>
+                    </tr>
+                    <tr>
+                        <td>Número de série</td>
+                        <td>941311J224AA003008</td>
+                        <td>941296J213AA003792</td>
+                    </tr>
+                    <tr>
+                        <td>Tensão de alimentação</td>
+                        <td>220V</td>
+                        <td>220V</td>
+                    </tr>
+                    <tr>
+                        <td>Frequência nominal</td>
+                        <td>60Hz</td>
+                        <td>60Hz</td>
+                    </tr>
+                    <tr>
+                        <td>Potência nominal</td>
+                        <td>1250W</td>
+                        <td>1250W</td>
+                    </tr>
+                    <tr>
+                        <td>Corrente elétrica nominal</td>
+                        <td>7,5A</td>
+                        <td>7,5A</td>
+                    </tr>
+                    <tr>
+                        <td>Capacidade de refrigeração</td>
+                        <td>2637W (9000 BTU/h)</td>
+                        <td>2637W (9000 BTU/h)</td>
+                    </tr>
+                    <tr>
+                        <td>Compressor</td>
+                        <td>RECHI PRECISION (35W2ALLB9F#MC)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fluido refrigerante</td>
+                        <td>R410A</td>
+                        <td></td>
+                    </tr>
+                </table>
+            
+
+    
+<br>
+    <!--Tópicos dos documentos que acompanham a amostra-->
+    <h2 class="title">
+        Documentação que acompanha a amostra:
+    </h2>
+    <ul>
+        <li>Planilha de Especificações Técnicas (PET);</li>
+        <li>Manual.</li>
+    </ul>
+    <!--Observações selecionadas pelo usuário, de acordo com o ensaio em questão-->
+    <h2 class="title">
+        Observações:
+    </h2>
+    <ul js="Observacoes.map(e=>`<li>${e.label}</li>`).join('') + `<li>${(Resultados.Results)} Informações adicionais podem ser acessadas em Parte 2 - Resultados dos ensaios.</li>`">
+    </ul>
+    <!--Resultados finais referentes a conformidade ou não conformidade da amostra nos ensaios realizados-->
+<hr>
+<!--Informações fixas dos documentos normativos utilizados para a realização dos ensaios-->
+<h1 class="title">
+    Documento(s) normativo(s) utilizado(s):
+</h1>
+    <li>
+        International Organization for Standardization. ISO 5151:2017
+        - Non-ducted air conditioners and heat pumps - Testing and rating for performance, 2017;
+    </li>
+    <li>
+        International Organization for Standardization. ISO 16358:2013 -
+        Air-cooled air conditioners and air-to-air
+        heat pumps - testing and calculating methods for seasonal 
+        performance factors - Part 1: Cooling seasonal
+        performance factor;
+    </li>
+    <li>
+        Portaria Inmetro nº 269, de 22 de junho de 2021 - 
+        Requisitos de avaliação da conformidade de condicionadores de ar.
+    </li>
+<br>
+<!--Informações sobre as condições ambientais para a realização de ensaios,
+    sendo a temperatura e a umidade relativa valores fixos e a pressão atmosférica
+    um valor variável para cada ensaio-->
+<h1 class="title">
+    Condições ambientais:
+</h1>
+    <span class="items"><center>
+        Temperatura: 23 °C ± 5 °C
+    </center></span>
+    <span class="items"><center>
+        Umidade Relativa: 55 % ± 15 %
+    </center></span>
+<br>
+<!--Tabelas das informações das condições de temperatura do bulbo
+    utilizadas no ensaio, variando a quantidade de tabelas
+    e as informações de acordo com a quantidade de pontos ensaiados-->
+<h1 class="title">
+    Condições de ensaio:
+</h1>
+    
+
+    <!--Categoria Inverter - 3 pontos-->
+                <h3><center>
+                    100% da capacidade nominal
+                </center></h3>
+                <div style="overflow: hidden;">
+                    <table style="width: 45%; float: left;">
+                        <tr>
+                            <th colspan="2" align="center">
+                                Calorímetro unidade externa
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo seco [°C]</td>
+                            <td>35,0</td>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo úmido[°C]</td>
+                            <td>24,0</td>
+                        </tr>
+                    </table>
+                    <table style="width: 45%; float: right;">
+                        <tr>
+                            <th colspan="2" align="center">
+                                Calorímetro unidade interna
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo seco [°C]</td>
+                            <td>27,0</td>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo úmido[°C]</td>
+                            <td>19,0</td>
+                        </tr>
+                    </table>
+                </div>
+                <h3><center>
+                    50% da capacidade nominal
+                </center></h3>
+                <div style="overflow: hidden;">
+                    <table style="width: 45%; float: left;">
+                        <tr>
+                            <th colspan="2" align="center">
+                                Calorímetro unidade externa
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo seco [°C]</td>
+                            <td>35,0</td>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo úmido[°C]</td>
+                            <td>24,0</td>
+                        </tr>
+                    </table>
+                    <table style="width: 45%; float: right;">
+                        <tr>
+                            <th colspan="2" align="center">
+                                Calorímetro unidade interna
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo seco [°C]</td>
+                            <td>27,0</td>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo úmido[°C]</td>
+                            <td>19,0</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <h3><center>
+                    50% da capacidade nominal
+                </center></h3>
+                <div style="overflow: hidden;">
+                    <table style="width: 45%; float: left;">
+                        <tr>
+                            <th colspan="2" align="center">
+                                Calorímetro unidade externa
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo seco [°C]</td>
+                            <td>29,0</td>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo úmido[°C]</td>
+                            <td>19,0</td>
+                        </tr>
+                    </table>
+                    <table style="width: 45%; float: right;">
+                        <tr>
+                            <th colspan="2" align="center">
+                                Calorímetro unidade interna
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Temperatura bulbo seco [°C]</td>
+                            <td>27,0</td>
+                        </tr>
+                        <tr>            
+                            <td>Temperatura bulbo úmido[°C]</td>
+                        <td>19,0</td>
+                        </tr>
+                    </table>
+                </div>
+            
+
+    
+<hr>
+<!--Observações padrões e fixas no relatório-->
+<h1 class="title">
+    Observações:
+</h1>
+    <p>
+        Considerou-se como regra de decisão para a declaração da conformidade a não utilização da incerteza de medição.
+    </p>
+    <p>
+        Itens dos documentos normativos de referência deste relatório não descritos com resultados não foram solicitados
+        pelo requerente ou não fazem parte do escopo de acreditação do laboratório.
+    </p>
+<hr>
+    <!--Parte 2 do relatório que contém as informações referente aos resultados,
+    e as evidências(Fotos da amostra)-->
+    <!--Tabelas com os resultados gerados nos ensaios realizados na amostra em questão,
+    variando a quantidade de tabelas apresentadas de acordo com o número de pontos analisado-->
+    
+        <h1><center>
+            Parte 2 - Resultados dos ensaios
+        </center></h1>
+        <!--Informações fixas referente as condições gerais dos ensaios realizados e
+            sobre as tabelas que serão apresentadas no relatório-->
+        <h1 class="title reset-title-counters">
+            Resultados obtidos e conclusões:
+        </h1>
+            <p>
+                O ensaio foi realizado após um período (mínimo) de uma hora de estabilização, sendo este executado durante o período
+                abaixo descrito, com aquisição de dados em intervalos não superiores a 1 minuto.
+            </p>
+            <p>
+                As tabelas abaixo apresentam os resultados do ensaio e as conclusões quanto ao atendimento ou não às especificações
+                da base normativa.
+            </p>
+        <br>
+        <br>
+    <!-- 3 pontos realizados no ensaio-->  
+                    <table>
+                        <tr>
+                            <th>Grandezas</th>
+                            <th>Resultado de ensaio</th>
+                            <th>IM</th>
+                            <th>k</th>
+                            <th>Valor declarado</th>
+                            <th>Critério de aceitação</th>
+                            <th>Percentual calculado</th>
+                            <th>Conclusão</th>
+                        </tr>
+                        <tr>
+                            <td>Pressão atmosférica [hPa]</td>
+                            <td>1009.63</td>
+                            <td></td>
+                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Vazão de ar [m³/h]</td>
+                            <td>473.96</td>
+                            <td></td>
+                            <td></td>
+                            <td>470</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de refrigeração [kW]</td>
+                            <td>2.96</td>
+                            <td></td>
+                            <td></td>
+                            <td>2.64</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de refrigeração [kBTU/h]</td>
+                            <td>10.08</td>
+                            <td></td>
+                            <td></td>
+                            <td "valorDeclarado">9</td>
+                            <td>>92%</td>
+                            <td>112.03%</td>
+                            <td>Conforme</td>
+                        </tr>
+                        <tr>
+                            <td>Consumo de energia [W]</td>
+                            <td>828.1</td>
+                            <td></td>
+                            <td></td>
+                            <td>815</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Coeficiente de eficiência energética [W/W]</td>
+                            <td>3.57</td>
+                            <td></td>
+                            <td></td>
+                            <td>3.24</td>
+                            <td>>92%</td>
+                            <td>110.31%</td>
+                            <td>Conforme</td>
+                        </tr>
+                        <caption class="table reset-caption-counters">Resultados obtidos (100% - 35°C)</caption>
+                    </table>
+                <hr>
+                    <table>
+                        <tr>
+                            <th>Grandezas</th>
+                            <th>Resultado de ensaio</th>
+                            <th>IM</th>
+                            <th>k</th>
+                            <th>Valor declarado</th>
+                            <th>Critério de aceitação</th>
+                            <th>Percentual calculado</th>
+                            <th>Conclusão</th>
+                        </tr>
+                        <tr>
+                            <td>Pressão atmosférica [hPa]</td>
+                            <td>1008.53</td>
+                            <td></td>
+                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Vazão de ar [m³/h]</td>
+                            <td>499.40</td>
+                            <td></td>
+                            <td></td>
+                            <td>470</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de refrigeração [kW]</td>
+                            <td>1.42</td>
+                            <td></td>
+                            <td></td>
+                            <td>1.32</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de refrigeração [kBTU/h]</td>
+                            <td>4.83</td>
+                            <td></td>
+                            <td></td>
+                            <td>9</td>
+                            <td>45% a 55%</td>
+                            <td>53.7%</td>
+                            <td>Conforme</td>
+                        </tr>
+                        <tr>
+                            <td>Consumo de energia [W]</td>
+                            <td>291.2</td>
+                            <td></td>
+                            <td></td>
+                            <td>305</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Coeficiente de eficiência energética [W/W]</td>
+                            <td>4.86</td>
+                            <td></td>
+                            <td></td>
+                            <td>4.33</td>
+                            <td>>92%</td>
+                            <td>112.39%</td>
+                            <td>Conforme</td>
+                        </tr>
+                        <caption class="table">Resultados obtidos (50% - 35°C)</caption>
+                    </table>
+                <hr>
+                    <table>
+                        <tr>
+                            <th>Grandezas</th>
+                            <th>Resultado de ensaio</th>
+                            <th>IM</th>
+                            <th>k</th>
+                            <th>Valor declarado</th>
+                            <th>Critério de aceitação</th>
+                            <th>Percentual calculado</th>
+                            <th>Conclusão</th>
+                        </tr>
+                        <tr>
+                            <td>Pressão atmosférica [hPa]</td>
+                            <td>1008.23</td>
+                            <td></td>
+                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Vazão de ar [m³/h]</td>
+                            <td>500.07</td>
+                            <td></td>
+                            <td></td>
+                            <td>470</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de refrigeração [kW]</td>
+                            <td>1.30</td>
+                            <td></td>
+                            <td></td>
+                            <td>1.33</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Capacidade de refrigeração [kBTU/h]</td>
+                            <td>4.42</td>
+                            <td></td>
+                            <td></td>
+                            <td>9</td>
+                            <td>45% a 55%</td>
+                            <td>49.14%</td>
+                            <td>Conforme</td>
+                        </tr>
+                        <tr>
+                            <td>Consumo de energia [W]</td>
+                            <td>186.6</td>
+                            <td></td>
+                            <td></td>
+                            <td>222</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Coeficiente de eficiência energética [W/W]</td>
+                            <td>6.95</td>
+                            <td></td>
+                            <td></td>
+                            <td>5.99</td>
+                            <td>>92%</td>
+                            <td>115.95%</td>
+                            <td>Conforme</td>
+                        </tr>
+                        <caption class="table">Resultados obtidos (50% - 29°C)</caption>
+                    </table>
+                <br>
+                <br>
+                <br>
+                    <table>
+                        <tr>
+                            <th>Grandezas</th>
+                            <th>Resultado</th>
+                            <th>Valor declarado</th>
+                            <th>Critério de aceitação</th>
+                            <th>Percentual calculado</th>
+                            <th>Conclusão</th>
+                        </tr>
+                        <tr>
+                        <td>Índice de Desempenho de Resfriamento Sazonal (IDRS) [Wh/Wh]</td>
+                        <td>7.53</td>
+                        <td>6.02</td>
+                        <td>>92%</td>
+                        <td>125.08%</td>
+                        <td>Conforme</td>
+                    </tr>
+                    <tr>
+                        <td>Consumo de energia (kWh/ano)</td>
+                        <td>324.30</td>
+                        <td>362</td>
+                        <td>-</td>
+                        <td>89.59%</td>
+                        <td>-</td>
+                    </tr>
+                        <tr>
+                            <td>Consumo no modo de espera²(W)</td>
+                            <td>-</td>
+                            <td>3</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <caption class="table">Resultados IDRS</caption>
+                    </table>
+
+                    
+        
+
+      
+<hr>
+    <!--Informações fixas sobre incertezas de medição-->
+    <h2>
+        Incertezas de Medição (IM):
+    </h2>
+        <p>
+            A incerteza expandida de medição relatada é declarada como a incerteza padrão de medição multiplicada
+            pelo fator de abrangência “k”, com graus de liberdade efetivos (Veff) correspondentes a um nível de
+            confiança de aproximadamente 95%.
+        </p>
+    <!--Imagens de evidência da amostra inseridas pelo usuário -->
+    
+        <h2>
+            Fotos da amostra:
+        </h2>
+    
+    <figure>
+        <img style="width: auto; max-height: 140px;" src="Fotos/Figura 1 - Unidade externa.png" alt="Unidade externa"/>
+        <figcaption>       
+            Unidade externa
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img style="width: auto; min-height: 400px;" src="assets/Figura 3 - Etiqueta da unidade externa.png" alt="Etiqueta da unidade externa" />
+        <figcaption>
+            Etiqueta da unidade externa
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img style="width: auto; max-height: 100px;" src="assets/Figura 5 - Número de série da unidade externa.png" alt="Número de série da unidade externa" />
+        <figcaption> 
+            Número de série da unidade externa
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img style="width: auto; max-height: 200px;" src="assets/Figura 7 - Compressor.png" alt="Compressor" />
+        <figcaption>
+            Compressor
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img style="width: auto; max-height: 120px;" src="assets/Figura 2 - Unidade interna.png" alt="Unidade interna" />
+        <figcaption>
+            Unidade interna
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+    <img style="width: auto; min-height: 400px;" src="assets/Figura 4  - Etiqueta da unidade interna.png" alt="Etiqueta da unidade interna" />
+        <figcaption>
+            Etiqueta da unidade interna
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img style="width: auto; max-height: 80px;" src="assets/Figura 6 - Número de série da unidade interna.png" alt="Número de série da unidade interna" />
+        <figcaption>
+            Número de série unidade interna
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img style="width: auto; min-height: 400px;" src="assets/Figura 8 - ENCE.png" alt="ENCE" />
+        <figcaption>
+            ENCE
+        </figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img  style="width: auto; min-height: 600px;" src="assets/PET.png" alt="PET"/>
+        <figcaption>
+            PET fornecida pelo requerente
+        </figcaption>
+    </figure>
+
+
+    

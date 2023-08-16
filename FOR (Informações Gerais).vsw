@@ -1,0 +1,348 @@
+{
+  "mode": "form-creator",
+  "id": "table",
+  "cells": [
+    {
+      "id": "title",
+      "type": "h1",
+      "value": "Informações gerais"
+    },
+    {
+      "id": "MTY4MjYxOTMyMDcxMTEwMDg4Nzg3",
+      "type": "list",
+      "lock": "true",
+      "items": [
+        {
+          "id": "MTY4MjYxOTMyNzgzMzEwMDg4Nzg3",
+          "type": "input",
+          "parentId": "MTY4MjYxOTMyMDcxMTEwMDg4Nzg3",
+          "title": "Elaborado por",
+          "value": "Marcus Vinícius"
+        },
+        {
+          "id": "MTY4MjYxOTMzMTQ3MDEwMDg4Nzg3",
+          "type": "input",
+          "parentId": "MTY4MjYxOTMyMDcxMTEwMDg4Nzg3",
+          "title": "Aprovado por",
+          "value": "Rodrigo Silveira"
+        },
+        {
+          "id": "MTY4MjYxOTMzMzk5MTEwMDg4Nzg3",
+          "type": "inputDateWithOutTime",
+          "parentId": "MTY4MjYxOTMyMDcxMTEwMDg4Nzg3",
+          "title": "Data de publicação"
+        }
+      ],
+      "title": "Elaborado por",
+      "value": "Rodrigo Silveira"
+    },
+    {
+      "id": "MTY4MzAyODgxNjMwNzgwNDAwNzE3",
+      "type": "ps1",
+      "title": "Número de relatório",
+      "source": "const getCell = (id) => this.TextDocument.cells.find(cell => cell.id === id);\r\n\r\nconst cliente = getCell(`MTY3OTU5MTA1MjAzNjgwNDAwNzE3`).items[0].value || \"\";\r\nconst produto = getCell(`MTY4MDAwMTc4NjQ0NzgwNDAwNzE3`).items[0].value || \"\";\r\nconst protocolo = getCell(`MTY4MDAwMTc4NjQ0NzgwNDAwNzE3`).items[2].value || \"\";\r\nconst orcamento = getCell(`MTY4MDAwMTc4NjQ0NzgwNDAwNzE3`).items[3].value || \"\";\r\n\r\nlet year = new Date().getFullYear();\r\n\r\ndocument.querySelectorAll('button,input').forEach(button => button.disabled = true);\r\nformContainer.classList.add('loading');\r\n\r\nvscode.postMessage({\r\n\r\n    data: this.TextDocument,\r\n\r\n    id: this.cell.id,\r\n\r\n    type: 'script', args: [\r\n\r\n        `${cliente}`,\r\n\r\n        `${produto}`,\r\n\r\n        `${protocolo}`,\r\n\r\n        `${orcamento}`,\r\n\r\n        `T:\\\\Relatórios\\\\!Controle de emissão de relatórios\\\\${year}\\\\Eficiência Energética_${year}.xlsx`\r\n\r\n    ], script: 'reportEnum'\r\n\r\n});",
+      "metadata": {}
+    },
+    {
+      "id": "MTY3OTU5MTA2NjgyODgwNDAwNzE3",
+      "type": "h2",
+      "value": "Cliente:"
+    },
+    {
+      "id": "MTY3OTU5MTA1MjAzNjgwNDAwNzE3",
+      "type": "list",
+      "items": [
+        {
+          "id": "9e5d0e5b5e848c6d1870f6e4e57",
+          "title": "Razão social:",
+          "value": "",
+          "type": "input"
+        },
+        {
+          "id": "b872e0d9ed6ebd5e1870f6e7c2f",
+          "title": "CNPJ:",
+          "value": "",
+          "type": "input"
+        },
+        {
+          "id": "09ebafd65d76a3ad1870f6eb53f",
+          "title": "Endereço da empresa solicitante:",
+          "value": "",
+          "type": "input"
+        },
+        {
+          "id": "c9c0f8dcffddce871870f6ed9c7",
+          "title": "CEP:",
+          "value": "",
+          "type": "input"
+        }
+      ],
+      "title": "CEP:",
+      "value": "",
+      "": ""
+    },
+    {
+      "id": "MTY3OTU5MTE1NzQ2NzgwNDAwNzE3",
+      "type": "h2",
+      "value": "Fabricante:"
+    },
+    {
+      "id": "MTY3OTU5MTE1Mjg4NTgwNDAwNzE3",
+      "type": "list",
+      "items": [
+        {
+          "id": "90cc9736c9dc43581870f6f9e90",
+          "title": "Razão social:",
+          "value": "",
+          "type": "input"
+        },
+        {
+          "id": "fe8e2808c502bc8e1870f700120",
+          "title": "CNPJ:",
+          "value": "",
+          "type": "input"
+        },
+        {
+          "id": "45bae931579a499e1870f703210",
+          "title": "Endereço da unidade fabril:",
+          "value": "",
+          "type": "input"
+        },
+        {
+          "id": "aab42031a46dc5331870f704bc8",
+          "title": "CEP:",
+          "value": "",
+          "type": "input"
+        }
+      ],
+      "title": "CEP:",
+      "value": ""
+    },
+    {
+      "id": "MTY3OTU5MDMyNTE4ODgwNDAwNzE3",
+      "type": "h2",
+      "value": "Objeto ensaiado (amostra):&nbsp;"
+    },
+    {
+      "id": "MTY4MDAwMTc4NjQ0NzgwNDAwNzE3",
+      "type": "list",
+      "items": [
+        {
+          "id": "MTY4MDAwMTgwMzQyMjgwNDAwNzE3",
+          "type": "input",
+          "title": "Nome:",
+          "value": ""
+        },
+        {
+          "id": "MTY4MDAwMTg0Nzg5NDgwNDAwNzE3",
+          "type": "input",
+          "title": "Fabricante:",
+          "value": ""
+        },
+        {
+          "id": "MTY4MDAwMTg2MTY5NDgwNDAwNzE3",
+          "type": "input",
+          "title": "Protocolo LABELO:",
+          "value": ""
+        },
+        {
+          "id": "MTY4MDAwMTg3Nzk2OTgwNDAwNzE3",
+          "type": "input",
+          "title": "Orçamento LABELO:",
+          "value": ""
+        },
+        {
+          "id": "MTY4MDAwMTg5NTA2MjgwNDAwNzE3",
+          "type": "input",
+          "title": "Marca de comercialização:",
+          "value": ""
+        },
+        {
+          "id": "MTY4MjUwNzk4MTU5MDgwNDAwNzE3",
+          "type": "inputDateWithOutTime",
+          "parentId": "MTY4MDAwMTc4NjQ0NzgwNDAwNzE3",
+          "title": "Data de recebimento da amostra:",
+          "value": ""
+        }
+      ],
+      "title": "Marca de comercialização:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDYxNzcwMzE2OTgwNDAwNzE3",
+      "type": "select",
+      "items": [
+        "Unidade externa",
+        "Unidade externa e unidade interna"
+      ],
+      "title": "Unidades:",
+      "value": "Unidade externa e unidade interna"
+    },
+    {
+      "id": "MTY3OTkyMzc2NjM4NTgwNDAwNzE3",
+      "type": "h3",
+      "value": "Unidade externa:"
+    },
+    {
+      "id": "MTY4MDE4MjI3NzU4MjgwNDAwNzE3",
+      "type": "input",
+      "title": "Modelo:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjI4NDgwNTgwNDAwNzE3",
+      "type": "input",
+      "title": "Número de série:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjI4OTI2OTgwNDAwNzE3",
+      "type": "input",
+      "title": "Tensão de alimentação:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjI5MjQ2MjgwNDAwNzE3",
+      "type": "input",
+      "title": "Frequência nominal:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjI5NTM5NjgwNDAwNzE3",
+      "type": "input",
+      "title": "Potência nominal:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjI5ODA2NzgwNDAwNzE3",
+      "type": "input",
+      "title": "Corrente elétrica nominal:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMwMDczODgwNDAwNzE3",
+      "type": "input",
+      "title": "Capacidade de refrigeração:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMwMzMwMDgwNDAwNzE3",
+      "type": "input",
+      "title": "Compressor:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMwNjI2ODgwNDAwNzE3",
+      "type": "input",
+      "title": "Fluido refrigerante:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDAwOTA3NDg3NzgwNDAwNzE3",
+      "type": "h3",
+      "value": "Unidade interna"
+    },
+    {
+      "id": "MTY4MDE4MjMwOTMwMDgwNDAwNzE3",
+      "type": "input",
+      "title": "Modelo:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMxMjI0NDgwNDAwNzE3",
+      "type": "input",
+      "title": "Número de série:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMxNDk5NjgwNDAwNzE3",
+      "type": "input",
+      "title": "Tensão de alimentação:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMxODAyMzgwNDAwNzE3",
+      "type": "input",
+      "title": "Frequência nominal:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMyMTAxMjgwNDAwNzE3",
+      "type": "input",
+      "title": "Potência nominal:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMyMzk3MjgwNDAwNzE3",
+      "type": "input",
+      "title": "Corrente elétrica nominal:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMyNjY0OTgwNDAwNzE3",
+      "type": "input",
+      "title": "Capacidade de refrigeração:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMyOTY5ODgwNDAwNzE3",
+      "type": "input",
+      "title": "Compressor:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDE4MjMzMjg4MzgwNDAwNzE3",
+      "type": "input",
+      "title": "Fluido refrigerante:",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDcwMjU1ODEyNTgwNDAwNzE3",
+      "type": "h2",
+      "value": "Observações:"
+    },
+    {
+      "id": "MTY4MDcwMjQ5ODE4OTgwNDAwNzE3",
+      "type": "CheckList",
+      "items": [
+        {
+          "id": "48d85c0a7882b6c2187528b453a",
+          "label": "Solicitação dos ensaios decorrente de processo de Homologação de produto.",
+          "value": true
+        },
+        {
+          "id": "98deb9f3c43a9bef187528bccaa",
+          "label": "Solicitação dos ensaios decorrente de Processo de Acompanhamento da Produção (AcP).",
+          "value": true
+        },
+        {
+          "id": "1c0293d845d48aef1876b243fb8",
+          "label": "<span class=\"ui-provider gz b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak\" dir=\"ltr\">Solicitação dos ensaios decorrente de Manutenção de registro de produto.</span>",
+          "value": ""
+        }
+      ],
+      "": ""
+    },
+    {
+      "id": "MTY4MDYzMTA0MTMzODgwNDAwNzE3",
+      "type": "select",
+      "items": [
+        "Os resultados deste relatório de ensaios apresentam itens conformes.",
+        "Este relatório de ensaio apresenta não conformidade em seus resultados."
+      ],
+      "title": "Resultados deste relatório de ensaios apresentam:",
+      "value": "Os resultados deste relatório de ensaios apresentam itens conformes."
+    }
+  ],
+  "report_template": {
+    "type": "code",
+    "id": "report_template",
+    "source": "const getCell = (id) => register.cells.find((cell) => cell.id === id);\r\n\r\n//Número do relatório e data de emissão do relatório (Data atual)\r\nsetAttr('Relatorio', {\r\n    Data: new Date(),\r\n    Numero: ('Nº ') + (getCell('MTY4MzAyODgxNjMwNzgwNDAwNzE3').metadata.report)\r\n})\r\n\r\n//Informações a respeito do cliente solicitante do ensaio\r\nconst cliente = getCell('MTY3OTU5MTA1MjAzNjgwNDAwNzE3')\r\n.items.map(e => `${e.title} ${e.value}`) || \"\";\r\nsetAttr(\"Cliente\", cliente);\r\n\r\n//Informações a respeito do fabricante do equipamento ensaiado \r\nconst fabricante = getCell('MTY3OTU5MTE1Mjg4NTgwNDAwNzE3')\r\n    .items.map(e => `${e.title} ${e.value}`) || \"\";\r\nsetAttr(\"Fabricante\", fabricante);\r\n\r\n//Informações e características a respeito da amostra ensaiada\r\nconst objetoEnsaiado = getCell('MTY4MDAwMTc4NjQ0NzgwNDAwNzE3')\r\n    .items.map(e=>{\r\n        if (e.type === 'inputDateWithOutTime'){\r\n            return `${e.title} ${(new Date(`${e.value}T03:00:00z`)).toLocaleDateString('pt-br')}`\r\n        }else{\r\n            return `${e.title} ${e.value}`\r\n        }\r\n    }) || \"\";\r\nsetAttr(\"ObjetoEnsaiado\", objetoEnsaiado);\r\n\r\n//const dateForm = getCell('MTY4MDAwMTc4NjQ0NzgwNDAwNzE3').items[5].value || \"\";\r\n//setAttr('ObjetoEnsaiado', objetoEnsaiado);\r\n\r\n//Header de validação do formulário\r\nconst header = getCell('MTY4MjYxOTMyMDcxMTEwMDg4Nzg3').items\r\nsetAttr('FOR', {Title: register.cells[0].value, Created: new Date(header[2].value).toJSON(), Author: header[0].value, AprovedBy: header[1].value});\r\n\r\n//Valor escolhido no select que irá exibir a tabela com\r\n// unidade externa e interna ou apenas com unidade externa\r\nconst selecionar = getCell('MTY4MDYxNzcwMzE2OTgwNDAwNzE3').value || \"\";\r\n\r\n//Select para os resultados de ensaio para o tipo de aparelho ensaiado\r\n//(Unidade externa ou Unidade externa e Unidade interna)\r\nfunction select(selecionar) {\r\n    switch (selecionar) {\r\n        case \"Unidade externa\":\r\n            return (`<!--Ensaio realizado em equipamento com unidade externa-->\r\n                <table>\r\n                    <tr>\r\n                        <th> </th>\r\n                        <th>Unidade externa</th>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Modelo</td>\r\n                        <td>${getCell('MTY4MDE4MjI3NzU4MjgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Número de série</td>\r\n                        <td>${getCell('MTY4MDE4MjI4NDgwNTgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Tensão de alimentação</td>\r\n                        <td>${getCell('MTY4MDE4MjI4OTI2OTgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Frequência nominal</td>\r\n                        <td>${getCell('MTY4MDE4MjI5MjQ2MjgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Potência nominal</td>\r\n                        <td>${getCell('MTY4MDE4MjI5NTM5NjgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Corrente elétrica nominal</td>\r\n                        <td>${getCell('MTY4MDE4MjI5ODA2NzgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Capacidade de refrigeração</td>\r\n                        <td>${getCell('MTY4MDE4MjMwMDczODgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Compressor</td>\r\n                        <td>${getCell('MTY4MDE4MjMwMzMwMDgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Fluido refrigerante</td>\r\n                        <td>${getCell('MTY4MDE4MjMwNjI2ODgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                </table>\r\n            `)\r\n            case \"Unidade externa e unidade interna\":\r\n            return (`<!--Ensaio realizado em equipamento com unidade externa e unidade interna-->\r\n                <table>\r\n                    <tr>\r\n                        <th> </th>\r\n                        <th>Unidade externa</th>\r\n                        <th>Unidade interna</th>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Modelo</td>\r\n                        <td>${getCell('MTY4MDE4MjI3NzU4MjgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMwOTMwMDgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Número de série</td>\r\n                        <td>${getCell('MTY4MDE4MjI4NDgwNTgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMxMjI0NDgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Tensão de alimentação</td>\r\n                        <td>${getCell('MTY4MDE4MjI4OTI2OTgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMxNDk5NjgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Frequência nominal</td>\r\n                        <td>${getCell('MTY4MDE4MjI5MjQ2MjgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMxODAyMzgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Potência nominal</td>\r\n                        <td>${getCell('MTY4MDE4MjI5NTM5NjgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMyMTAxMjgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Corrente elétrica nominal</td>\r\n                        <td>${getCell('MTY4MDE4MjI5ODA2NzgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMyMzk3MjgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Capacidade de refrigeração</td>\r\n                        <td>${getCell('MTY4MDE4MjMwMDczODgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMyNjY0OTgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Compressor</td>\r\n                        <td>${getCell('MTY4MDE4MjMwMzMwMDgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMyOTY5ODgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td>Fluido refrigerante</td>\r\n                        <td>${getCell('MTY4MDE4MjMwNjI2ODgwNDAwNzE3').value}</td>\r\n                        <td>${getCell('MTY4MDE4MjMzMjg4MzgwNDAwNzE3').value}</td>\r\n                    </tr>\r\n                </table>\r\n            `)\r\n    }\r\n}\r\n\r\n//Filtro de seleção das observações do item 2.2\r\nconst observacoes = getCell('MTY4MDcwMjQ5ODE4OTgwNDAwNzE3').items.filter(e => `${e.value}`) || \"\";;  \r\nsetAttr(\"Observacoes\", observacoes);\r\n\r\n//Resultado dos ensaios realizados\r\nconst result = {\r\n    Results: getCell(\"MTY4MDYzMTA0MTMzODgwNDAwNzE3\").value || \"\",\r\n};\r\nsetAttr(\"Resultados\", result);\r\n\r\nreturn select (selecionar)\r\n",
+    "metadata": {
+      "output": "<!--Ensaio realizado em equipamento com unidade externa e unidade interna-->\n                <table>\n                    <tr>\n                        <th> </th>\n                        <th>Unidade externa</th>\n                        <th>Unidade interna</th>\n                    </tr>\n                    <tr>\n                        <td>Modelo</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Número de série</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Tensão de alimentação</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Frequência nominal</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Potência nominal</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Corrente elétrica nominal</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Capacidade de refrigeração</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Compressor</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                    <tr>\n                        <td>Fluido refrigerante</td>\n                        <td></td>\n                        <td></td>\n                    </tr>\n                </table>\n            "
+    }
+  },
+  "metadata": {
+    "lastModified": "2023-07-12T18:44:43.499Z"
+  }
+}

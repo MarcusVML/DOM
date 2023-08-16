@@ -1,0 +1,121 @@
+{
+  "mode": "form-creator",
+  "id": "imagens",
+  "cells": [
+    {
+      "id": "title",
+      "type": "h1",
+      "value": "Fotos da amostra"
+    },
+    {
+      "id": "MTY4MDI2MjI3MjQ1MDgwNDAwNzE3",
+      "type": "h2",
+      "value": "Unidade externa:"
+    },
+    {
+      "id": "MTY4MDI2NDM5NjI4NjgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {
+        "alreadyExecuted": false,
+        "output": ""
+      },
+      "title": "&nbsp;Unidade externa",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2MjI1NTc4MDgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {
+        "alreadyExecuted": false,
+        "output": ""
+      },
+      "title": "Etiqueta da unidade externa",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2MjYyMDIxNjgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {
+        "alreadyExecuted": false,
+        "output": ""
+      },
+      "title": "Número de série da unidade externa",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2MjY0ODc2MTgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {},
+      "title": "Compressor",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2MjY2NTU5OTgwNDAwNzE3",
+      "type": "h2",
+      "value": "Unidade interna:"
+    },
+    {
+      "id": "MTY4MDI2MjY4MDQ4NzgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {},
+      "title": "Unidade interna",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2MjcwMjgxNDgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {},
+      "title": "Etiqueta da unidade interna",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2MjcyNTM4MjgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {},
+      "title": "Número de série da unidade interna",
+      "value": ""
+    },
+    {
+      "id": "MTY4MDI2Mjc0ODA5NDgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {},
+      "title": "ENCE",
+      "value": ""
+    },
+    {
+      "id": "MTY4MTI5OTY5MTczNjgwNDAwNzE3",
+      "type": "h3",
+      "value": "Print da PET:"
+    },
+    {
+      "id": "MTY4MTI5OTcxMjQ3ODgwNDAwNzE3",
+      "type": "file",
+      "source": "",
+      "metadata": {
+        "alreadyExecuted": false,
+        "output": ""
+      },
+      "title": "PET",
+      "value": ""
+    }
+  ],
+  "report_template": {
+    "type": "code",
+    "id": "report_template",
+    "source": "const getCell = (id) => register.cells.find((cell) => cell.id === id);\r\n\r\n//ID de cada imagem de amostra inserida no relatório\r\nconst figures = [\r\n    {\r\n        img: getCell('MTY4MDI2NDM5NjI4NjgwNDAwNzE3').value || \"\",\r\n        caption: \"Unidade externa\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2MjI1NTc4MDgwNDAwNzE3').value || \"\",\r\n        caption: \"Etiqueta da unidade externa\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2MjYyMDIxNjgwNDAwNzE3').value || \"\",\r\n        caption: \"Número de série da unidade externa\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2MjY0ODc2MTgwNDAwNzE3').value || \"\",\r\n        caption: \"Compressor\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2MjY4MDQ4NzgwNDAwNzE3').value || \"\",\r\n        caption: \"Unidade interna\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2MjcwMjgxNDgwNDAwNzE3').value || \"\",\r\n        caption: \"Etiqueta da unidade interna\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2MjcyNTM4MjgwNDAwNzE3').value || \"\",\r\n        caption: \"Número de série unidade interna\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MDI2Mjc0ODA5NDgwNDAwNzE3').value || \"\",\r\n        caption: \"ENCE\"\r\n    },\r\n    {\r\n        img: getCell('MTY4MTI5OTcxMjQ3ODgwNDAwNzE3').value || \"\",\r\n        caption: \"PET fornecida pelo requerente\"\r\n    },\r\n\r\n\r\n]\r\nconst _unidade_Externa = getCell('MTY4MDI2NDM5NjI4NjgwNDAwNzE3').value || \"\";\r\nconst _etiqueta_Unidade_Externa = getCell('MTY4MDI2MjI1NTc4MDgwNDAwNzE3').value || \"\";\r\nconst _numero_SerieUnidade_Externa = getCell('MTY4MDI2MjYyMDIxNjgwNDAwNzE3').value || \"\";\r\nconst _compressor = getCell('MTY4MDI2MjY0ODc2MTgwNDAwNzE3').value || \"\";\r\nconst _unidade_Interna = getCell('MTY4MDI2MjY4MDQ4NzgwNDAwNzE3').value || \"\";\r\nconst _etiqueta_Unidade_Interna = getCell('MTY4MDI2MjcwMjgxNDgwNDAwNzE3').value || \"\";\r\nconst _numero_Serie_Unidade_Interna = getCell('MTY4MDI2MjcyNTM4MjgwNDAwNzE3').value || \"\";\r\nconst _ENCE = getCell('MTY4MDI2Mjc0ODA5NDgwNDAwNzE3').value || \"\";\r\nconst _PET = getCell('MTY4MTI5OTcxMjQ3ODgwNDAwNzE3').value || \"\";\r\n\r\n\r\n\r\n\r\n//Exibição das imagens inseridas no formulário, com o caption devido abaixo de cada figura\r\n\r\nreturn figures\r\n.filter(e=> e.img !== \"\")\r\n.map(e=>`<figure>\r\n    <img src=\"${e.img}\" style= \"max-height: 200mm\"/>\r\n    <figcaption>\r\n        ${e.caption}\r\n    </figcaption>\r\n</figure>`).join(\"\\n\")\r\n// return `\r\n//     <figure>\r\n//         <img style=\"width: auto; max-height: 140px;\" src=\"${_unidade_Externa}\" alt=\"Unidade externa\"/>\r\n//         <figcaption>       \r\n//             Unidade externa\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img style=\"width: auto; min-height: 400px;\" src=\"${_etiqueta_Unidade_Externa}\" alt=\"Etiqueta da unidade externa\" />\r\n//         <figcaption>\r\n//             Etiqueta da unidade externa\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img style=\"width: auto; max-height: 100px;\" src=\"${_numero_SerieUnidade_Externa}\" alt=\"Número de série da unidade externa\" />\r\n//         <figcaption> \r\n//             Número de série da unidade externa\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img style=\"width: auto; max-height: 200px;\" src=\"${_compressor}\" alt=\"Compressor\" />\r\n//         <figcaption>\r\n//             Compressor\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img style=\"width: auto; max-height: 120px;\" src=\"${_unidade_Interna}\" alt=\"Unidade interna\" />\r\n//         <figcaption>\r\n//             Unidade interna\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//     <img style=\"width: auto; min-height: 400px;\" src=\"${_etiqueta_Unidade_Interna}\" alt=\"Etiqueta da unidade interna\" />\r\n//         <figcaption>\r\n//             Etiqueta da unidade interna\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img style=\"width: auto; max-height: 80px;\" src=\"${_numero_Serie_Unidade_Interna}\" alt=\"Número de série da unidade interna\" />\r\n//         <figcaption>\r\n//             Número de série unidade interna\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img style=\"width: auto; min-height: 400px;\" src=\"${_ENCE}\" alt=\"ENCE\" />\r\n//         <figcaption>\r\n//             ENCE\r\n//         </figcaption>\r\n//     </figure>\r\n//     <br>\r\n//     <figure>\r\n//         <img  style=\"width: auto; min-height: 600px;\" src=\"${_PET}\" alt=\"PET\"/>\r\n//         <figcaption>\r\n//             PET fornecida pelo requerente\r\n//         </figcaption>\r\n//     </figure>\r\n// `\r\n\r\n",
+    "metadata": {
+      "output": "<figure>\n    <img src=\"Fotos/PET.png\" style= \"max-height: 200mm\"/>\n    <figcaption>\n        PET fornecida pelo requerente\n    </figcaption>\n</figure>"
+    }
+  },
+  "metadata": {
+    "lastModified": "2023-07-12T12:00:11.694Z"
+  }
+}

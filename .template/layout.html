@@ -1,0 +1,163 @@
+<h1><center>
+        Parte 1 - Identificação e condições gerais
+</center></h1>
+<br>
+
+<!--Informações inseridas pelo usuário sobre o cliente solicitante-->
+<h1 class="title">
+    Cliente:
+</h1>
+    <ul js="Cliente.map(e=>`<li style='text-align:left'>${e}</li>`).join('')" style="column-count:2; list-style: none;">
+    </ul>
+        <!--Informações inseridas pelo usuário sobre o fabricante da amostra-->
+        <h2 class="title">
+            Fabricante:
+        </h2>
+            <ul js="Fabricante.map(e=>`<li style='text-align:left'>${e}</li>`).join('')" style="column-count: 2; list-style: none;">
+            </ul>
+            <!--Informações padrões e fixas sobre o LABELO-->
+        <h2 class="title">
+            Sumário de identificação do laboratório:
+        </h2>
+        <ul style="list-style: none;" >
+            <li>Razão social: União Brasileira de Educação e Assistência.</li>
+            <li>Nome fantasia: Pontifícia Universidade Católica do Rio Grande do Sul - PUCRS.</li>
+            <li>Unidade: LABELO - Laboratórios Especializados em Eletroeletrônica.</li>
+            <li>CNPJ: 88.630.413/0002-81.</li>
+            <li>Endereço: Av. Ipiranga, nº 6681, Prédio 30, Bloco A - Sala 210 - Partenon - Porto Alegre - RS.</li>
+            <li>CEP: 90619-900.</li>
+            <li>Número de acreditação do LABELO/PUCRS: CRL 0075.</li>
+        </ul>
+<hr>
+<!--Informações inseridas pelo usuário sobre as características da amostra ensaiada-->
+<h1 class="title">
+    Objeto ensaiado (amostra):
+</h1>
+    <ul js="ObjetoEnsaiado.map(e=>`<li style='text-align:left'>${e}</li>`).join('')" style="column-count:2; list-style: none;">
+    </ul>
+    <!--Tabela com informações referentes as características e informações da amostra
+    exibindo a tabela com os dados de unidade externa e interna ou apenas unidade externa,
+    conforme selecionad no formulário-->
+    {{ Begin table }}
+
+    {{ table }}
+
+    {{ End table }}
+<br>
+    <!--Tópicos dos documentos que acompanham a amostra-->
+    <h2 class="title">
+        Documentação que acompanha a amostra:
+    </h2>
+    <ul>
+        <li>Planilha de Especificações Técnicas (PET);</li>
+        <li>Manual.</li>
+    </ul>
+    <!--Observações selecionadas pelo usuário, de acordo com o ensaio em questão-->
+    <h2 class="title">
+        Observações:
+    </h2>
+    <ul js="Observacoes.map(e=>`<li>${e.label}</li>`).join('') + `<li>${(Resultados.Results)} Informações adicionais podem ser acessadas em Parte 2 - Resultados dos ensaios.</li>`">
+    </ul>
+    <!--Resultados finais referentes a conformidade ou não conformidade da amostra nos ensaios realizados-->
+<hr>
+<!--Informações fixas dos documentos normativos utilizados para a realização dos ensaios-->
+<h1 class="title">
+    Documento(s) normativo(s) utilizado(s):
+</h1>
+    <li>
+        International Organization for Standardization. ISO 5151:2017
+        - Non-ducted air conditioners and heat pumps - Testing and rating for performance, 2017;
+    </li>
+    <li>
+        International Organization for Standardization. ISO 16358:2013 -
+        Air-cooled air conditioners and air-to-air
+        heat pumps - testing and calculating methods for seasonal 
+        performance factors - Part 1: Cooling seasonal
+        performance factor;
+    </li>
+    <li>
+        Portaria Inmetro nº 269, de 22 de junho de 2021 - 
+        Requisitos de avaliação da conformidade de condicionadores de ar.
+    </li>
+<br>
+<!--Informações sobre as condições ambientais para a realização de ensaios,
+    sendo a temperatura e a umidade relativa valores fixos e a pressão atmosférica
+    um valor variável para cada ensaio-->
+<h1 class="title">
+    Condições ambientais:
+</h1>
+    <span class="items"><center>
+        Temperatura: 23 °C ± 5 °C
+    </center></span>
+    <span class="items"><center>
+        Umidade Relativa: 55 % ± 15 %
+    </center></span>
+<br>
+<!--Tabelas das informações das condições de temperatura do bulbo
+    utilizadas no ensaio, variando a quantidade de tabelas
+    e as informações de acordo com a quantidade de pontos ensaiados-->
+<h1 class="title">
+    Condições de ensaio:
+</h1>
+    {{ Begin condicoes-ensaio }}
+
+    {{ condicoes-ensaio }}
+
+    {{ End condicoes-ensaio }}
+<hr>
+<!--Observações padrões e fixas no relatório-->
+<h1 class="title">
+    Observações:
+</h1>
+    <p>
+        Considerou-se como regra de decisão para a declaração da conformidade a não utilização da incerteza de medição.
+    </p>
+    <p>
+        Itens dos documentos normativos de referência deste relatório não descritos com resultados não foram solicitados
+        pelo requerente ou não fazem parte do escopo de acreditação do laboratório.
+    </p>
+<hr>
+    <!--Parte 2 do relatório que contém as informações referente aos resultados,
+    e as evidências(Fotos da amostra)-->
+    <!--Tabelas com os resultados gerados nos ensaios realizados na amostra em questão,
+    variando a quantidade de tabelas apresentadas de acordo com o número de pontos analisado-->
+    {{ Begin calorimetro_registro }}
+        <h1><center>
+            Parte 2 - Resultados dos ensaios
+        </center></h1>
+        <!--Informações fixas referente as condições gerais dos ensaios realizados e
+            sobre as tabelas que serão apresentadas no relatório-->
+        <h1 class="title reset-title-counters">
+            Resultados obtidos e conclusões:
+        </h1>
+            <p>
+                O ensaio foi realizado após um período (mínimo) de uma hora de estabilização, sendo este executado durante o período
+                abaixo descrito, com aquisição de dados em intervalos não superiores a 1 minuto.
+            </p>
+            <p>
+                As tabelas abaixo apresentam os resultados do ensaio e as conclusões quanto ao atendimento ou não às especificações
+                da base normativa.
+            </p>
+        <br>
+        <br>
+    {{ calorimetro_registro }}
+
+    {{ End calorimetro_registro }}  
+<hr>
+    <!--Informações fixas sobre incertezas de medição-->
+    <h2>
+        Incertezas de Medição (IM):
+    </h2>
+        <p>
+            A incerteza expandida de medição relatada é declarada como a incerteza padrão de medição multiplicada
+            pelo fator de abrangência “k”, com graus de liberdade efetivos (Veff) correspondentes a um nível de
+            confiança de aproximadamente 95%.
+        </p>
+    <!--Imagens de evidência da amostra inseridas pelo usuário -->
+    {{ Begin imagens }}
+        <h2>
+            Fotos da amostra:
+        </h2>
+    {{ imagens }}
+
+    {{ End imagens }}
