@@ -3,13 +3,14 @@
         "template": "r:\\Compartilhado\\FOR TEL/DOM",
         "options": [],
         "name": "1405/2022",
-        "dist": "T:\\Laboratórios\\Equipamentos Elétricos de Uso Doméstico\\Eficiência Energética\\02_RELATÓRIOS\\Relatórios para revisão",
+        "dist": "R:\\Compartilhado\\VSW\\Relatorios_teste",
         "state": "done"
     },
 
     "required":["Arquivos","Fotos"],
 
-    "dist": "T:\\Laboratórios\\Equipamentos Elétricos de Uso Doméstico\\Eficiência Energética\\02_RELATÓRIOS\\Relatórios para revisão"
+    "dist": "R:\\Compartilhado\\VSW\\Relatorios_teste"
+    //"dist": "T:\\Laboratórios\\Equipamentos Elétricos de Uso Doméstico\\Eficiência Energética\\02_RELATÓRIOS\\Relatórios para revisão"
 
 }
 

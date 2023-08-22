@@ -41,7 +41,12 @@
       "type": "ps1",
       "title": "Número de relatório",
       "source": "const getCell = (id) => this.TextDocument.cells.find(cell => cell.id === id);\r\n\r\nconst cliente = getCell(`MTY3OTU5MTA1MjAzNjgwNDAwNzE3`).items[0].value || \"\";\r\nconst produto = getCell(`MTY4MDAwMTc4NjQ0NzgwNDAwNzE3`).items[0].value || \"\";\r\nconst protocolo = getCell(`MTY4MDAwMTc4NjQ0NzgwNDAwNzE3`).items[2].value || \"\";\r\nconst orcamento = getCell(`MTY4MDAwMTc4NjQ0NzgwNDAwNzE3`).items[3].value || \"\";\r\n\r\nlet year = new Date().getFullYear();\r\n\r\ndocument.querySelectorAll('button,input').forEach(button => button.disabled = true);\r\nformContainer.classList.add('loading');\r\n\r\nvscode.postMessage({\r\n\r\n    data: this.TextDocument,\r\n\r\n    id: this.cell.id,\r\n\r\n    type: 'script', args: [\r\n\r\n        `${cliente}`,\r\n\r\n        `${produto}`,\r\n\r\n        `${protocolo}`,\r\n\r\n        `${orcamento}`,\r\n\r\n        `T:\\\\Relatórios\\\\!Controle de emissão de relatórios\\\\${year}\\\\Eficiência Energética_${year}.xlsx`\r\n\r\n    ], script: 'reportEnum'\r\n\r\n});",
-      "metadata": {}
+      "metadata": {
+        "report": "REF0246/2023",
+        "status": "ok",
+        "html": "<h4>REF0246/2023</h4>"
+      },
+      "icon": "fa fa-play"
     },
     {
       "id": "MTY3OTU5MTA2NjgyODgwNDAwNzE3",
@@ -55,7 +60,7 @@
         {
           "id": "9e5d0e5b5e848c6d1870f6e4e57",
           "title": "Razão social:",
-          "value": "",
+          "value": "teste",
           "type": "input"
         },
         {
@@ -78,7 +83,7 @@
         }
       ],
       "title": "CEP:",
-      "value": "",
+      "value": "teste",
       "": ""
     },
     {
@@ -131,25 +136,25 @@
           "id": "MTY4MDAwMTgwMzQyMjgwNDAwNzE3",
           "type": "input",
           "title": "Nome:",
-          "value": ""
+          "value": "isto"
         },
         {
           "id": "MTY4MDAwMTg0Nzg5NDgwNDAwNzE3",
           "type": "input",
           "title": "Fabricante:",
-          "value": ""
+          "value": "e"
         },
         {
           "id": "MTY4MDAwMTg2MTY5NDgwNDAwNzE3",
           "type": "input",
           "title": "Protocolo LABELO:",
-          "value": ""
+          "value": "um"
         },
         {
           "id": "MTY4MDAwMTg3Nzk2OTgwNDAwNzE3",
           "type": "input",
           "title": "Orçamento LABELO:",
-          "value": ""
+          "value": "teste"
         },
         {
           "id": "MTY4MDAwMTg5NTA2MjgwNDAwNzE3",
@@ -166,7 +171,7 @@
         }
       ],
       "title": "Marca de comercialização:",
-      "value": ""
+      "value": "teste"
     },
     {
       "id": "MTY4MDYxNzcwMzE2OTgwNDAwNzE3",
@@ -343,6 +348,6 @@
     }
   },
   "metadata": {
-    "lastModified": "2023-07-12T18:44:43.499Z"
+    "lastModified": "2023-08-18T17:56:29.249Z"
   }
 }
